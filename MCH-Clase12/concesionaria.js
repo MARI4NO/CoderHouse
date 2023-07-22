@@ -1,4 +1,11 @@
 let autosImportados = require('./auto')
+
+let persona = {
+   nombre: 'Juan',
+   capacidadDePagoEnCuotas: 20000,
+   capacidadDePagoTotal: 100000
+   }
+
 let concesionaria = {
    autos: autosImportados,
 
@@ -45,8 +52,32 @@ let concesionaria = {
       else{
          return 0;
       }
+   },
+   puedeComprar:function(auto,persona){
+      let precioTotal = auto.precio;
+      let cuotas = precioTotal/auto.cuotas;
+      if(precioTotal <= persona.capacidadDePagoTotal && cuotas <= persona.capacidadDePagoEnCuotas){
+         return true;
+      }
+      else{
+         return false;
+      }
+   },
+   autosQuePuedeComprar:function(persona){
+      let autosParaVender = this.autosParaLaVenta();
+      //autosParaVender = autosParaVender.filter(element=> element.puedeComprar()== true)
+      let autos =[]
+      for (let i =0 ; i < autosParaVender.length;i++){
+         if(this.puedeComprar(autosParaVender[i],persona )==true){
+            autos.push(autosParaVender[i]);
+         }
+      }
+      return autos;
+      
    }
 }
+
+
 /*
 autosNuevos: function () {
       let autos = this.autosParaLaVenta().filter(
@@ -61,8 +92,11 @@ autosNuevos: function () {
 
 
 //onsole.log(concesionaria.autosNuevos())
-console.log(concesionaria.venderAuto('JJK116'))
-console.log(concesionaria.venderAuto('APL123'))
-//console.log(concesionaria.autos)
-console.log(concesionaria.listaDeVentas())
-console.log(concesionaria.totalDeVentas())
+//console.log(concesionaria.venderAuto('JJK116'))
+//console.log(concesionaria.venderAuto('APL123'))
+console.log(concesionaria.autos);
+//console.log(persona)
+console.log(concesionaria.puedeComprar(concesionaria.autos[1],persona));
+console.log(concesionaria.autosQuePuedeComprar(persona))
+//console.log(concesionaria.listaDeVentas())
+//console.log(concesionaria.totalDeVentas())
