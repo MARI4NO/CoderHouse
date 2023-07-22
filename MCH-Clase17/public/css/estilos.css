@@ -1,0 +1,59 @@
+/*
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+#img-logo{
+    height: 50%;
+    width: auto;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #EAC926;
+}
+
+nav ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding-inline-start: none;
+}
+
+.cuotas{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.burger-menu i{
+    background-color:#1259c3 ;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
+
+.icono-azul{
+    background-color:white ;
+    color:  #1259c3;
+   
+}

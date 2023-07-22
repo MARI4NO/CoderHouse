@@ -28,11 +28,41 @@ let concesionaria = {
    autosNuevos: function () {
       let autos = this.autosParaLaVenta();
       return autos.filter(element => (element.km <= 100 ))
+   },
+   listaDeVentas: function(){
+      let vendidos = this.autos.filter(element => element.vendido == true);
+      return vendidos
+   },
+   totalDeVentas:function(){
+      let vendidos =this.listaDeVentas()
+      console.log(this.listaDeVentas().length)
+      if(vendidos.length>0){
+         vendidos=vendidos.reduce(function(acum,valor){
+            return acum+=valor;
+         },0);
+         return vendidos;
+      }
+      else{
+         return 0;
+      }
    }
 }
+/*
+autosNuevos: function () {
+      let autos = this.autosParaLaVenta().filter(
+         function(auto){
+            return auto.km <100
+         });
+      return autos;
+
+}
+*/
+ 
 
 
-
-console.log(concesionaria.autosNuevos())
+//onsole.log(concesionaria.autosNuevos())
 console.log(concesionaria.venderAuto('JJK116'))
-console.log(concesionaria.autosNuevos())
+console.log(concesionaria.venderAuto('APL123'))
+//console.log(concesionaria.autos)
+console.log(concesionaria.listaDeVentas())
+console.log(concesionaria.totalDeVentas())
