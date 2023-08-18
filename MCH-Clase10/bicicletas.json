@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "marca": "TopMega",
+    "modelo": "FM18SI29AM211",
+    "rodado": "29",
+    "añoFabricacion": "2020",
+    "color": "celeste",
+    "peso": "17",
+    "tipo": "Montañera",
+    "precio": "55000",
+    "vendida": "si"
+  },
+  {
+    "id": 2,
+    "marca": "Fierce",
+    "modelo": "FM18F29AM210,",
+    "rodado": "29",
+    "añoFabricacion": "2021",
+    "color": "negra",
+    "peso": "15",
+    "tipo": "Montañera",
+    "precio": "155000",
+    "vendida": "no"
+  }
+]
