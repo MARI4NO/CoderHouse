@@ -6,6 +6,13 @@ Celeste: #1259c3;
 Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;
+
+Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
 */
 * {
   margin: 0px;
@@ -17,43 +24,56 @@ main {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #eac926;
   margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+/*Estilos del navbar*/
+#barra-busq{
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.main-header{
+  background-color: #eac926;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   text-decoration: none;
-  padding-inline-start: none;
 }
-
+.segunda-barra ul li a{
+  color: #222;
+  font-weight: 400;
+}
 
 .link {
   text-decoration: none;
   color: black;
 }
 
-.burger-menu i {
-  background-color: #1259c3;
-  color: white;
-  padding: 4px;
-  border-radius: 4px;
-  height: 30px;
-  width: 30px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-}
+/*Estilos del footer*/
 
 footer {
   text-align: center;
   background-color: white;
   width: 100%;
+  padding-top: 50px;
 }
 
 .icono-azul {
@@ -61,9 +81,47 @@ footer {
   color: #1259c3;
 }
 
-.ListaProductos {
-  background-color: #ebebeb;
+.textos{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 15px ;
 }
+
+.textos h4{
+  font-weight: bold;
+}
+.textos i {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.titulos{
+  font-size: 24px;
+  color: #666;
+  font-weight:bold;
+  font-stretch: expanded;
+  justify-content: flex-start;
+  display: flex;
+  padding-left: 5%;
+  margin: 20px 0;
+
+}
+
+.banner img{
+  display: flex;
+  width: 100%;
+}
+/*Estilos de los Productos*/
+
+.ListaProductos {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .producto {
   margin-top: 10px;
   margin-left: auto;
@@ -74,7 +132,7 @@ footer {
   text-align: center;
   width: 50%;
   background-color: white;
-  transition: all 1s;
+  transition: all 1s ease;
 }
 .producto-precio {
   margin: 0px;
@@ -97,23 +155,13 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   position: relative;
-  transition: all 1.5s;
+  transition: all 1.5s ease-out;
 }
-/*
-.product-card:hover .product-desc {
-  display: block;
-  visibility: hidden;
-}
-*/
+
 .producto:hover .producto-nombre{
   visibility: visible;
   display: block;
  
-}
-.producto-nombre {
-  margin-top: 10px;
-  padding-top: 10px;
-  display: inline;
 }
 
 .producto-datos > .iconoCarrito {
@@ -131,7 +179,7 @@ footer {
 }
 
 .producto-imagen img {
-  width: 100%;
+  width: 90%;
   display: flex;
 }
 .iconoCarrito i {
@@ -151,34 +199,29 @@ footer {
 }
 
 */
-#barra-busq{
-  height: 100%;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  padding-left: 10px;
-}
 
 
 @media (min-width: 361px) {
+  .producto{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* Todo respecto al header */
   .primera-barra {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
-
   .nav-logo {
     display: flex;
-    flex-grow: 0.5;
-  }
-  .nav-logo img{
-    display: flex;
+    width: 50%;
   }
   .nav-barra {
     display: flex;
-    flex-grow: 0.5;
+    width: 50%;
     justify-content: center;
   }
   .nav-cuotas {
@@ -189,13 +232,31 @@ footer {
     margin-left: 15px;
     flex-grow: 0;
     align-self:flex-end;
-  }
-  article .producto-datos {
-    visibility: hidden;
+    margin: 30px 0;
+
   }
   nav ul {
     display: none;
   }
+
+  .burger-menu{
+    background-color: #1259c3;
+    color: white;
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+  }
+  /* Todo respectoa los productos*/
+  article .producto-nombre {
+    visibility: hidden;
+  }
+  
 }
 
 @media (min-width: 769px) {
@@ -203,19 +264,111 @@ footer {
   .producto:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-
   
   article .producto-datos {
     visibility: visible;
   }
   .producto-nombre{
     visibility: hidden;
-   
   }
   .burger-menu {
     display: none;
   }
   nav ul {
     display: block;
+  }
+
+  .producto{
+    flex-wrap: wrap;
+    width: 24%;
+  }
+
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .textos{
+    flex-wrap: wrap;
+    width: 29%;
+  }
+
+  header{
+    flex-wrap: wrap;
+  }
+  .primera-barra{
+    display: flex;
+    width:100%;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .nav-logo{
+    display: flex;
+    width: 30%;
+  }
+  .nav-barra{
+    display: flex;
+    width: 40%;
+  }
+
+  .nav-cuotas{
+    display: flex;
+    width: 30%;
+    padding: 15px;
+    justify-content: center;
+  }
+  .nav-barra form {
+    width: 80%;
+  }
+  .barra-busq{
+    font-size: 16px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 10px;
+    position: relative;
+  }
+
+  .barra-busq button {
+    position: absolute;
+    right: 0.25rem;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: white;
+  }
+  .barra-busq i{
+    font-size: 14px;
+  color: #666;
+  }
+
+  .barra-busq input:focus{
+    outline: none;
+  }
+
+*/
+  .nav-cuotas{
+    display:flex ;
+    width: 30%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .segunda-barra{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .segunda-barra ul{
+    display: flex;
+  }
+  .segunda-barra li{
+    margin: 5px 5px;
   }
 }

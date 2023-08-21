@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.caja-formulario {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titulo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 15px 0;
+}
+.formulario {
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px 0;
+  padding: 25px 0;
+}
+.main {
+  justify-content: center;
+}
+.formulario h2 {
+  font-weight: 600;
+  display: block;
+  width: 100%;
+}
+
+.un-label {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.un-input {
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 50%;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0px;
+  transition: margin 0.3s;
+}
+
+.un-input:focus {
+  outline: none; /* Remueve el contorno en el foco */
+  margin: 10px 0; /* Quita el margen al seleccionar */
+}
+
+.dos-input{
+    margin: 10px 0px;
+}
+.un-input::placeholder {
+  color: gray; /* Cambia el color */
+ /* Cambia el estilo de fuente */
+  font-weight:lighter; /* Cambia el peso de la fuente */
+  font-size: 14px;
+}
+
+.btn-cancelar{
+    background-color:white;
+    color: #F21F32;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;;
+    padding: 10px;
+    border-radius: 8px;
+    border:solid 2px #D8D8DA;
+    width: 20%;
+    margin: 0 10px;
+    transition: all 0.8s;
+}
+.btn-enviar{
+    color: #0064FA;
+    border: none;
+    background-color:#ECEDF0;
+    border:solid 2px #D8D8DA;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 20%;
+    margin: 0 10px;
+    transition: all 0.8s;
+}
+
+.btn-cancelar:hover{
+    color: white;
+    border: none;
+    background-color:#F21F32;
+    border:solid 2px #DA5662;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 7px -1px 22px -6px rgba(0,0,0,0.75);
+}
+.btn-enviar:hover{
+    background-color: #0044AA;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border:solid 2px #0044AA;
+    box-shadow: 7px -1px 22px -6px rgba(0,0,0,0.75);
+}

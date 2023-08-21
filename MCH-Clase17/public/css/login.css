@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+
+
+
+  .boton-enviar{
+    color: #0064FA;
+    border: none;
+    background-color:#ECEDF0;
+    border:solid 2px #D8D8DA;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 0 10px;
+    transition: all 0.8s;
+}
+
+
+.boton-enviar:hover{
+    background-color: #0044AA;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border:solid 2px #0044AA;
+    box-shadow: 7px -1px 22px -6px rgba(0,0,0,0.75);
+}
