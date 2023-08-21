@@ -5,7 +5,7 @@ const path = require("path");
 //Para levantar el proyecto en render
 const port = process.env.PORT || 3030;
 
-const publicPath = path.join(__dirname, "./public");
+const publicPath = path.join(__dirname, "../public");
 app.use(express.static(publicPath));
 
 app.get(["/", "/home"], (req, res) => {
@@ -27,5 +27,5 @@ app.listen(3030,() => {
 })  */
 
 app.listen(port, () => {
-  console.log("Servidor corriendo en el puerto ${port}");
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
